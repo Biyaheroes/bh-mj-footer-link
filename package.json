@@ -1,0 +1,39 @@
+{
+  "name": "bh-mj-footer-link",
+  "version": "0.0.0",
+  "description": "Biyaheroes MJML Footer Link Component",
+  "main": ".filter.js",
+  "scripts": {
+    "preinstall": "yarn global add babel-cli bower gulp-cli webpack webpack-dev-server watch && npm install npm@latest mjml@latest veon@latest browser-sync@latest --global --force-latest",
+    "postinstall": "npm rebuild node-sass",
+    "deploy": "gulp clean && veon set production \"gulp && babel focus-detail.js --out-file focus-detail.support.js --source-maps && webpack --progress\"",
+    "build": "gulp clean && gulp && babel focus-detail.js --out-file focus-detail.support.js --source-maps && webpack --progress",
+    "test": "veon set test \"gulp && webpack --progress --env.test && mjml test-index.mjml --output test-index.html\"",
+    "watch": "gulp clean && watch \"npm run test\" ./ ./*/ --filter=./.filter.js --wait=5 --interval=5 --ignoreDotFiles",
+    "live": "gulp clean && gulp watch",
+    "server": "veon set test \"webpack-dev-server --env.test\"",
+    "proxy": "browser-sync start --port 3000 --proxy \"localhost:4000\" --index=\"test-index.html\" --files \"test-index.html\" \"test.deploy.js\"",
+    "browser": "browser-sync start --server --port 3000 --index=\"test-index.html\" --files \"test-index.html\" \"test.deploy.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biyaheroes/bh-mj-footer-link.git"
+  },
+  "keywords": [
+    "biyaheroes",
+    "mjml",
+    "detail",
+    "component",
+    "bh-mj-footer-link"
+  ],
+  "author": "Biyaheroes Developers <developers@biyhaeroes.com>",
+  "contributors": [
+    "Robot Biyaheroes <robot@biyaheroes.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Biyaheroes/bh-mj-footer-link/issues"
+  },
+  "homepage": "https://github.com/Biyaheroes/bh-mj-footer-link#readme"
+}

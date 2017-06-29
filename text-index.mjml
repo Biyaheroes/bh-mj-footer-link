@@ -1,0 +1,7 @@
+<mjml>
+	<mj-body>
+		<mj-container>
+			<mj-footer-link title="Biyaheroes" value="This is a normal value" />
+		</mj-container>
+	</mj-body>
+</mjml>
