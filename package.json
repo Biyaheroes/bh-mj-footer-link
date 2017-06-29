@@ -4,10 +4,10 @@
   "description": "Biyaheroes MJML Footer Link Component",
   "main": ".filter.js",
   "scripts": {
-    "preinstall": "yarn global add babel-cli bower gulp-cli webpack webpack-dev-server watch && npm install npm@latest mjml@latest veon@latest browser-sync@latest --global --force-latest",
+    "preinstall": "npm install babel-cli@latest gulp-cli@latest webpack@latest webpack-dev-server@latest watch@latest mjml@latest veon@latest browser-sync@latest --global",
     "postinstall": "npm rebuild node-sass",
-    "deploy": "gulp clean && veon set production \"gulp && babel focus-detail.js --out-file focus-detail.support.js --source-maps && webpack --progress\"",
-    "build": "gulp clean && gulp && babel focus-detail.js --out-file focus-detail.support.js --source-maps && webpack --progress",
+    "deploy": "veon set production \"gulp clean && gulp && babel detail-list.js --out-file detail-list.support.js --source-maps && webpack --progress\"",
+    "build": "veon set development \"gulp clean && gulp && babel detail-list.js --out-file detail-list.support.js --source-maps && webpack --progress\"",
     "test": "veon set test \"gulp && webpack --progress --env.test && mjml test-index.mjml --output test-index.html\"",
     "watch": "gulp clean && watch \"npm run test\" ./ ./*/ --filter=./.filter.js --wait=5 --interval=5 --ignoreDotFiles",
     "live": "gulp clean && gulp watch",
