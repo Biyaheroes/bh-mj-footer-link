@@ -1,21 +1,21 @@
-require("graceful-fs").gracefulify(require("fs"));
+require( "graceful-fs" ).gracefulify( require( "fs" ) );
 
-const llamalize = require("llamalize");
-const path = require("path");
-const webpack = require("webpack");
+const llamalize = require( "llamalize" );
+const path = require( "path" );
+const webpack = require( "webpack" );
 
 const HotModuleReplacementPlugin = webpack.HotModuleReplacementPlugin;
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-const BowerResolvePlugin = require("bower-resolve-webpack-plugin");
+const BowerResolvePlugin = require( "bower-resolve-webpack-plugin" );
 
 const mode = process.env.NODE_ENV;
-const directory = process.cwd();
+const directory = process.cwd( );
 
-module.exports = function build(parameter) {
-	parameter = parameter || {};
+module.exports = function build( parameter ){
+	parameter = parameter || { };
 
 	return {
-		"entry": parameter.test ? "./test.js" : "./footer-link.support.js",
+		"entry": parameter.test? "./test.js" : "./footer-link.support.js",
 
 		"resolve": {
 			"descriptionFiles": [
@@ -32,19 +32,19 @@ module.exports = function build(parameter) {
 				"module",
 				"main"
 			],
-			"plugins": [new BowerResolvePlugin()]
+			"plugins": [ new BowerResolvePlugin( ) ]
 		},
 
 		"output": {
-			"library": parameter.test ? "test" : "footer-link",
+			"library": parameter.test? "test" : "footer-link",
 			"libraryTarget": "umd",
-			"filename": parameter.test ? "test.deploy.js" : "footer-link.deploy.js"
+			"filename": parameter.test? "test.deploy.js" : "footer-link.deploy.js"
 		},
 
 		"module": {
 			"rules": [
-				{ "test": /\.css$/, "loaders": ["style-loader?singleton", "css-loader", "resolve-url-loader"] },
-				{ "test": /\.(ttf|svg|eot|woff2?)$/, "loaders": ["url-loader"] }
+				{ "test": /\.css$/, "loaders": [ "style-loader?singleton", "css-loader", "resolve-url-loader" ] },
+				{ "test": /\.(ttf|svg|eot|woff2?)$/, "loaders": [ "url-loader" ] }
 			]
 		},
 
@@ -56,7 +56,7 @@ module.exports = function build(parameter) {
 		},
 
 		"plugins": [
-			((mode === "production" || mode === "test") ? new UglifyJsPlugin({
+			( ( mode === "production" || mode === "test" )? new UglifyJsPlugin( {
 				"compress": {
 					"keep_fargs": true,
 					"keep_fnames": true,
@@ -65,10 +65,10 @@ module.exports = function build(parameter) {
 				"comments": false,
 				"sourceMap": true,
 				"mangle": false
-			}) : null),
+			} ) : null ),
 
-			(mode === "test" ? new HotModuleReplacementPlugin() : null)
-		].filter((plugin) => { return !!plugin; }),
+			( mode === "test"? new HotModuleReplacementPlugin( ) : null )
+		].filter( ( plugin ) => { return !!plugin; } ),
 
 		"devtool": "#source-map",
 
@@ -92,4 +92,4 @@ module.exports = function build(parameter) {
 			}
 		}
 	}
-}; 
+};

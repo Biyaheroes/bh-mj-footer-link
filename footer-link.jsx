@@ -1,5 +1,4 @@
 "use strict";
-d		Copyright (@c) 2017 Biyaheroes Developers
 
 /*;
 	@module-license:
@@ -29,10 +28,10 @@ d		Copyright (@c) 2017 Biyaheroes Developers
 
 	@module-configuration:
 		{
-			"package": "detail",
-			"path": "detail/detail.jsx",
-			"file": "detail.jsx",
-			"module": "detail",
+			"package": "footer-link",
+			"path": "footer-link/footer-link.jsx",
+			"file": "footer-link.jsx",
+			"module": "footer-link",
 			"author": "Biyaheroes Developers",
 			"contributors": [
 				"Robot Biyaheroes <robot@biyaheroes.com>",
@@ -45,7 +44,7 @@ d		Copyright (@c) 2017 Biyaheroes Developers
 	@end-module-configuration
 
 	@module-documentation:
-		Biyaheroes MJML Detail List Component.
+		Biyaheroes MJML Footer Link Component.
 	@end-module-documentation
 
 	@include:
@@ -139,8 +138,20 @@ class FooterLink extends Component {
 			}
 		}
 
+		if( !doubt( list, ARRAY ) ){
+			return ( <Section
+						{ ...this.props }
+					>
+						<Column>
+							<Text>
+								{ "Sorry, there's no details to be shown" }
+							</Text>
+						</Column>
+					</Section> );
+		}
+
 		list = nbyx( list, count )
-			.map( ( row ) => filpos( row, 3, { "title": "", "link": "" } ) );
+			.map( ( row ) => filpos( row, 3, { "title": "", "label": "", "value": "" } ) );
 
 		return ( <Wrapper
 					{ ...this.props }
@@ -150,18 +161,17 @@ class FooterLink extends Component {
 					{
 						list.map( function onEachRow( row, index ){
 							return ( <Section
-										background-color="#3290cf"
 										key={ `row-${ index }` }
 										padding="0px 0px 0px 0px"
 									>
 										{
 											row.map( function onEachDetail( detail, index ){
-												return ( <FooterLink
+												return ( <Detail
 															{ ...detail }
 															key={ `detail-${ index }` }
 															count={ 3 }
 														>
-														</FooterLink> );
+														</Detail> );
 											} )
 										}
 									</Section> );

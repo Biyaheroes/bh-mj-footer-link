@@ -3,6 +3,8 @@ babel-runtime \
 jquery \ 
 mjml \ 
 mjml-core \ 
+mjml-text \ 
+mjml-column \ 
 react \ 
 wichevr \ 
 --save && \ 
