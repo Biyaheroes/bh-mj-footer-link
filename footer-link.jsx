@@ -67,6 +67,7 @@ import Section from "mjml-section";
 import Text from "mjml-text";
 import Wrapper from "mjml-wrapper";
 
+import doubt from "doubt";
 import filpos from "filpos";
 import nbyx from "nbyx";
 import parseon from "parseon";

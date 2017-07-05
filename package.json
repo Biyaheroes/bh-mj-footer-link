@@ -24,7 +24,7 @@
   "keywords": [
     "biyaheroes",
     "mjml",
-    "detail",
+    "footer",
     "component",
     "bh-mj-footer-link"
   ],
@@ -40,13 +40,22 @@
   "homepage": "https://github.com/Biyaheroes/bh-mj-footer-link#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
+    "bh-mj-detail": "^0.2.0",
+    "doubt": "^0.29.0",
+    "filpos": "^0.1.0",
     "jquery": "^3.2.1",
     "mjml": "^3.3.3",
     "mjml-column": "^3.3.3",
     "mjml-core": "^3.3.3",
+    "mjml-section": "^3.3.3",
     "mjml-text": "^3.3.3",
+    "mjml-wrapper": "^3.3.3",
+    "nbyx": "^0.1.0",
+    "parseon": "^0.8.0",
+    "protype": "^0.22.0",
     "react": "^15.6.1",
-    "wichevr": "^0.11.0"
+    "sxty4": "^0.10.0",
+    "wichevr": "^0.12.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -69,7 +78,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "llamalize": "^0.15.0",
+    "llamalize": "^0.16.0",
     "resolve-url-loader": "^2.1.0",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
