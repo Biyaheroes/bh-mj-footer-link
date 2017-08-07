@@ -1,41 +1,25 @@
 {
-  "name": "bh-mj-footer-link",
-  "description": "Biyaheroes MJML Footer Link Component",
-  "main": ".filter.js",
-  "authors": [
-    "Biyaheroes Developers <developers@biyhaeroes.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "biyaheroes",
-    "mjml",
-    "detail",
-    "component",
-    "bh-mj-footer-link"
-  ],
-  "homepage": "https://github.com/Biyaheroes/bh-mj-footer-link",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "jquery": "^3.2.1",
-    "react": "^15.6.1",
-    "wichevr": "^0.12.0",
-    "bh-mj-detail": "^0.1.0",
-    "doubt": "^0.29.0",
-    "filpos": "^0.1.0",
-    "nbyx": "^0.1.0",
-    "parseon": "^0.8.0",
-    "protype": "^0.22.0",
-    "sxty4": "^0.10.0"
-  },
-  "resolutions": {
-    "wichevr": "^0.12.0",
-    "raze": "^0.32.0",
-    "doubt": "^0.29.0"
-  }
+	"name": "bh-mj-footer-link",
+	"description": "Biyaheroes MJML Footer Link Component",
+	"main": "footer-link.deploy.js",
+	"support": "footer-link.module.jsx",
+	"authors": [
+		"Biyaheroes Developers <developers@biyhaeroes.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"biyaheroes",
+		"mjml",
+		"detail",
+		"component",
+		"bh-mj-footer-link"
+	],
+	"homepage": "https://github.com/Biyaheroes/bh-mj-footer-link",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
